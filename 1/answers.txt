@@ -1,0 +1,108 @@
+Johdatus tekoälyyn, laskarit 1.
+
+TEHTÄVÄ 2 BEGIN
+CAPTCHA pyrkii erottamaan ihmisen ja mahdollisen roskapostittajabotin esittämällä käyttäjälle jollain tavalla vääristetyn kuvan, josta ihmisaivojen hahmontunnistus kykenee erottamaan kirjaimia tai numeroita, mutta tietokoneen kuvantunnistus ei.
+CAPTCHA on Turingin testi, jossa testaaja on palveluntarjoaja ja testattava palvelun käyttäjä. Tämä ei muutu, vaikka käyttäjä olisikin botti joka suorittaa varsinaisen kuvantunnistustehtävän ihmistyövoiman avulla.
+END TEHTÄVÄ 2
+
+TEHTÄVÄ 3 BEGIN
+Syvyyssuuntainen haku, solmulistan sisältö:
+( A )
+( D  C  B )
+( F  C  B )
+( E  C  B )
+( C B )
+( B )
+( )
+
+Leveyssuuntainen haku, solmulistan sisältö:
+( A )
+( B  C  D )
+( C  D )
+( D  F )
+( F )
+( E )
+( )
+END TEHTÄVÄ 3
+
+TEHTÄVÄ 4 BEGIN
+(kann. vas., läh. vas., kann. oik., läh. oik., veneen sijainti)
+<lähtötila> -> sallitut tilat (jotka eivät johda lähetyssaarnaajien kuolemaan)
+Tilat, jotka ovat jo aiemmin esiintyneet, merkitään tähdellä (*)
+
+(3,3,0,0,L) -> (2,3,1,0,R) (1,3,2,0,R) (2,2,1,1,R)
+
+(2,3,1,0,R) -> (3,3,0,0,L)*
+(1,3,2,0,R) -> (3,3,0,0,L)* (2,3,1,0,L)
+(2,2,1,1,R) -> (3,3,0,0,L)* (2,3,1,0,L)
+
+(2,3,1,0,L) -> (2,2,1,1,R)* (1,3,2,0,R)* (0,3,3,0,R)
+
+(0,3,3,0,R) -> (2,3,1,0,L)* (1,3,2,0,L)
+
+(1,3,2,0,L) -> (0,3,3,0,R)* (1,1,2,2,R)
+
+(1,1,2,2,R) -> (1,3,2,0,L)* (2,2,1,1,L)
+
+(2,2,1,1,L) -> (1,1,2,2,R)* (2,0,1,3,R)
+
+(2,0,1,3,R) -> (2,2,1,1,L)* (3,0,0,3,L)
+
+(3,0,0,3,L) -> (2,0,1,3,R)* (1,0,2,3,R)
+
+(1,0,2,3,R) -> (3,0,0,3,L)* (2,0,1,3,L) (1,1,2,2,L)
+
+(2,0,1,3,L) -> (1,0,2,3,R)* (0,0,3,3,R)
+(1,1,2,2,L) -> (1,0,2,3,R)* (0,0,3,3,R)
+
+Eräs kelvollinen ratkaisu:
+(3,3,0,0,L) -> (1,3,2,0,R) -> (2,3,1,0,L) -> (0,3,3,0,R) -> (1,3,2,0,L) ->
+(1,1,2,2,R) -> (2,2,1,1,L) -> (2,0,1,3,R) -> (3,0,0,3,L) -> (1,0,2,3,R) ->
+(2,0,1,3,L) -> (0,0,3,3,R)
+END TEHTÄVÄ 4
+
+TEHTÄVÄ 5 BEGIN
+stack size: 5
+queue size: 5
+(kann. vasemmalla, läh. vasemmalla, kann. oikealla, läh. oikealla, veneen sijainti)
+stack:
+(1,3,2,0,left)
+(0,3,3,0,right)
+(2,3,1,0,left)
+(2,2,1,1,right)
+(3,3,0,0,left)
+queue:
+(3,3,0,0,left)
+(2,2,1,1,right)
+(2,3,1,0,left)
+(0,3,3,0,right)
+(1,3,2,0,left)
+stack size: 0
+queue size: 0
+END TEHTÄVÄ 5
+
+TEHTÄVÄ 6 BEGIN
+Syvyyssuuntainen haku:
+(value: A, color: black, predecessor: nil)
+(value: D, color: black, predecessor: A)
+(value: F, color: black, predecessor: D)
+(value: E, color: black, predecessor: F)
+(value: C, color: black, predecessor: A)
+(value: B, color: black, predecessor: A)
+Reitti A -> F
+(value: A, color: black, predecessor: nil)
+(value: D, color: black, predecessor: A)
+(value: F, color: black, predecessor: D)
+
+Leveyssuuntainen haku:
+(value: A, color: black, predecessor: nil)
+(value: B, color: black, predecessor: A)
+(value: C, color: black, predecessor: A)
+(value: D, color: black, predecessor: A)
+(value: F, color: black, predecessor: C)
+(value: E, color: black, predecessor: F)
+Reitti A -> F
+(value: A, color: black, predecessor: nil)
+(value: C, color: black, predecessor: A)
+(value: F, color: black, predecessor: C)
+END TEHTÄVÄ 6
