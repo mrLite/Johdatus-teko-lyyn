@@ -8,8 +8,12 @@ puts "Johdatus tekoälyyn, laskarit 1."
 
 puts "\nTEHTÄVÄ 2 BEGIN"
 puts <<-eos
-CAPTCHA pyrkii erottamaan ihmisen ja mahdollisen roskapostittajabotin esittämällä käyttäjälle jollain tavalla vääristetyn kuvan, josta ihmisaivojen hahmontunnistus kykenee erottamaan kirjaimia tai numeroita, mutta tietokoneen kuvantunnistus ei.
-CAPTCHA on Turingin testi, jossa testaaja on palveluntarjoaja ja testattava palvelun käyttäjä. Tämä ei muutu, vaikka käyttäjä olisikin botti joka suorittaa varsinaisen kuvantunnistustehtävän ihmistyövoiman avulla.
+CAPTCHA pyrkii erottamaan ihmisen ja mahdollisen roskapostittajabotin esittämällä käyttäjälle
+jollain tavalla vääristetyn kuvan, josta ihmisaivojen hahmontunnistus kykenee erottamaan
+kirjaimia tai numeroita, mutta tietokoneen kuvantunnistus ei.
+CAPTCHA on Turingin testi, jossa testaaja on palveluntarjoaja ja testattava palvelun käyttäjä.
+Tämä ei muutu, vaikka käyttäjä olisikin botti joka suorittaa varsinaisen kuvantunnistustehtävän
+ihmistyövoiman avulla.
 eos
 puts "END TEHTÄVÄ 2"
 
